@@ -1,0 +1,8 @@
+name: test
+version: 0.0.1
+databricks-runtime: 6.2
+url: 'http://github.com/pblocz/databricks-template'
+author: 'pblocz'
+author_email: 'josepablocg@gmail.com'
+packages: 
+  - 'library'
