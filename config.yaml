@@ -1,5 +1,6 @@
 name: test
 version: 0.0.1
+description: Some interesting short description
 databricks-runtime: 6.2
 url: 'http://github.com/pblocz/databricks-template'
 author: 'pblocz'

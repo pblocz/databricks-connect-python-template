@@ -9,6 +9,10 @@ import yaml
 
 config = yaml.load(Path("config.yaml").open("r"))
 
+# read the contents of your README file
+with (Path(__file__).parent / 'README.md').open(encoding='utf-8') as f:
+    long_description = f.read()
+
 class bdist_spark(bdist_egg):
       description = "create an egg and prepare driver and config"
 
@@ -48,7 +52,9 @@ class bdist_spark(bdist_egg):
 
 setup(name=config["name"],
       version=config["version"],
-      description='Some interesting description',
+      description=config["description"],
+      long_description=long_description,
+      long_description_content_type='text/markdown',
       url=config["url"],
       author=config["author"],
       author_email=config["author_email"],
