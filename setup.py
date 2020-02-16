@@ -60,6 +60,7 @@ setup(name=config["name"],
       },
       install_requires = [
           'databricks-connect=={runtime}.*'.format(runtime=config["databricks-runtime"]),
-          'pandas'
+          'pandas',  # For displaydf
+          'pyarrow'  # For displaydf
       ]
 )
